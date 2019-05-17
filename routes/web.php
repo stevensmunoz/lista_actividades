@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-// Route::middleware(['auth'])->group(function() {
+Route::middleware(['auth'])->group(function() {
     Route::resource('actividades', 'ActividadController', [
         'only' => [
             'index', 'store', 'update', 'edit','destroy'
@@ -32,4 +32,4 @@ Auth::routes();
         ]
     ]);
 
-// });
+});
